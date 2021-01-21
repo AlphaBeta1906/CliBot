@@ -3,7 +3,7 @@
 requests<= 2.25.1
 selenium<=3.141.0
 Pillow<=8.1.0
-# pip install -r requirements.txtOoh, black and yellow!
+# pip install -r requirements.txt
 
 
 
