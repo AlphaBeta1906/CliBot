@@ -6,7 +6,7 @@ well i even don't know what is this and why i create it, it just a program that 
 ## features(for now)
 |command   | output  |
 |---|---|
-|  covid|  return the report of covid-19 data from|
+|  covid|  return the report of covid-19 data|
 |  jokes | return a random jokes|
 |  weather <city>  |  return a report of current weather in city |
 |  ufact | return random useless fact :p  |
