@@ -21,7 +21,7 @@ How to compile:
   3. type command ```pip install -r requirements.txt``` or ```pip3 install -r requirements.txt``` to install pip module.
   4. when you want to edit or add feature make sure to comment all command(voidCoommand and NonVoidCommand) in dict that used api key(when the config.MY_KEY var is present) to prevent error.<br/>
 
-features of this app is still low and it will be great if you add some feature or improve this README(because i'm not good at expalain something)/command<br/>
+features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 *note  :this program is writen in python 3.9 so make sure use the same version*<br/>
 *note again : you can add api as long as the api not required key*
   
