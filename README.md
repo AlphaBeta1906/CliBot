@@ -23,7 +23,7 @@ How to compile:
 
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 *note  :this program is writen in python 3.9 so make sure use the same version*<br/>
-*note again : you can add api as long as the api not required key*
+*note again : you can add api as long as they required key*
   
 ## License
 [MIT](https://github.com/AlphaBeta1906/CliBot/blob/master/LICENSE)
