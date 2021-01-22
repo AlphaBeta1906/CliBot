@@ -15,14 +15,14 @@ voidCommand = {
 	"name" : void.name,
 	"ip" : void.ip,
 	"clr" : void.clr,
-	"jokes" : api.Jokes,
-	"covid" : api.covid,
+	#"jokes" : api.Jokes,
+	#"covid" : api.covid,
 	"ufact" : api.UselessFact
 }
 
 NonVoidCommand = {
 	"hello" : Hello,
-	"weather" : api.weather
+	#"weather" : api.weather
 }
 
 def main():
