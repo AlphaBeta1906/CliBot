@@ -1,11 +1,9 @@
 import ApiModule as apm
 from datetime import date
-import config
-
+#import config
 
 """	
-
-#you must have my permision to add api('s) that require key
+#don't add api that required key!!!
 def covid():
 	try:
 		url = "https://covid-19-data.p.rapidapi.com/totals"
@@ -52,14 +50,14 @@ def Jokes():
 			print(response.status_code)
 	except:
 		print("connection error")
-"""
+
 def weather(location):
 	location = " ".join(location)
 	complete_url = config.weather_key  + "&q=" + location
 	myDict = apm.Handle(complete_url)
 	weather = myDict['weather'][0]
 	temperature = myDict['main']
-	
+
 	print("")
 	print("city name : " + location)
 	print("weather : " + weather['main'])
@@ -67,7 +65,7 @@ def weather(location):
 	print("temperature : " + str( round(temperature['temp'] - 273,0)) + "°C" )
 	print("humidity : " + str(temperature['humidity'] )+"%")
 	print("country : " + myDict['sys']['country'] + "\n")
-
+"""
 def UselessFact():
 	url = "https://uselessfacts.jsph.pl/random.json?language=en"
 	myDict = apm.Handle(url)
