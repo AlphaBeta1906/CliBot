@@ -1,13 +1,9 @@
-
-import requests
-import json
+import ApiModule as apm
 from datetime import date
-import config
-import WebScrapping
+#import config
 
 """	
-
-#you must have my permision to add api('s) that require key
+#don't add api that required key!!!
 def covid():
 	try:
 		url = "https://covid-19-data.p.rapidapi.com/totals"
@@ -57,34 +53,20 @@ def Jokes():
 
 def weather(location):
 	location = " ".join(location)
-	try:
-		complete_url = config.weather_key  + "&q=" + location
-		response = requests.get(complete_url)
-		myDict = response.json()
-		if response.status_code == 200:
-			weather = myDict['weather'][0]
-			temperature = myDict['main']
-			print("")
-			print("city name : " + location)
-			print("weather : " + weather['main'])
-			print("description : " + weather['description'] )
-			print("temperature : " + str( round(temperature['temp'] - 273,0)) + "°C" )
-			print("humidity : " + str(temperature['humidity'] )+"%")
-			print("country : " + myDict['sys']['country'] + "\n")
-		else:
-			print("city not found\n")
-	except:
-		print("connection error")
+	complete_url = config.weather_key  + "&q=" + location
+	myDict = apm.Handle(complete_url)
+	weather = myDict['weather'][0]
+	temperature = myDict['main']
+
+	print("")
+	print("city name : " + location)
+	print("weather : " + weather['main'])
+	print("description : " + weather['description'] )
+	print("temperature : " + str( round(temperature['temp'] - 273,0)) + "°C" )
+	print("humidity : " + str(temperature['humidity'] )+"%")
+	print("country : " + myDict['sys']['country'] + "\n")
 """
-
-
 def UselessFact():
-	try:
-		url = "https://uselessfacts.jsph.pl/random.json?language=en"
-		response = requests.get(url)
-		myDict = response.json()
-		if response.status_code == 200:
-			print("here a random useless fact : " + myDict['text']+"\n")
-		else: 
-			print("error")
-	except:
+	url = "https://uselessfacts.jsph.pl/random.json?language=en"
+	myDict = apm.Handle(url)
+	print("here a random useless fact : " + myDict['text'] + "\n")
