@@ -1,3 +1,5 @@
+
+#this script were used to automate github workflow
 git add .
 echo 'enter message'
 read  message
@@ -9,5 +11,5 @@ read  branch
 
 git push origin $branch
 
-read
+echo 'finish'
 

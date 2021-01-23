@@ -1,7 +1,8 @@
 import requests
 import json
 from datetime import date
-#import config
+import config
+import WebScrapping
 
 """	
 
@@ -54,6 +55,7 @@ def Jokes():
 		print("connection error")
 
 def weather(location):
+	location = " ".join(location)
 	try:
 		complete_url = config.weather_key  + "&q=" + location
 		response = requests.get(complete_url)
@@ -66,13 +68,14 @@ def weather(location):
 			print("weather : " + weather['main'])
 			print("description : " + weather['description'] )
 			print("temperature : " + str( round(temperature['temp'] - 273,0)) + "°C" )
-			print("humidity : " + str(temperature['humidity']) + "%\n")
+			print("humidity : " + str(temperature['humidity'] )+"%")
+			print("country : " + myDict['sys']['country'] + "\n")
 		else:
 			print("city not found\n")
 	except:
 		print("connection error")
-
 """
+
 
 def UselessFact():
 	try:
@@ -80,7 +83,6 @@ def UselessFact():
 		response = requests.get(url)
 		myDict = response.json()
 		if response.status_code == 200:
-			print("\n")
 			print("here a random useless fact : " + myDict['text']+"\n")
 		else: 
 			print("error")
