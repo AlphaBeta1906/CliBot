@@ -1,3 +1,4 @@
+
 import requests
 import json
 from datetime import date
@@ -87,4 +88,3 @@ def UselessFact():
 		else: 
 			print("error")
 	except:
-		print("connection error")

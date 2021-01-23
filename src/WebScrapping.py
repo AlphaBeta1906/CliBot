@@ -1,3 +1,4 @@
+
 from selenium import webdriver
 
 #browser.get('http://seleniumhq.org/')
@@ -13,4 +14,3 @@ def search(keyword):
 	for i in range(1):
 		 matched_elements = browser.get("https://www.google.com/search?q=" +keyword + "&start=" + str(i))
 		
-	print("\nsearch success\n")
