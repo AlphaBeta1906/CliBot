@@ -7,9 +7,9 @@ well i even don't know what is this and why i create it, it just a program that 
 ### Api
 |command   | output  |
 |---|---|
-|  covid|  return the report of covid-19 data|
-|  jokes | return a random jokes|
-|  weather < city >  |  return a report of current weather in city |
+|  covid|  return the report of covid-19 data (disabled)|
+|  jokes | return a random jokes (disabled)|
+|  weather < city >  |  return a report of current weather in city (disabled)|
 |  ufact | return random useless fact :p  |
 
 ### other's
@@ -23,7 +23,7 @@ well i even don't know what is this and why i create it, it just a program that 
 ### web scrapping(hasn't finsih yet)
 |command | output  |
 |---|---|
-| search <keyword>  | automatically open google chrome to show result   |
+| search <keyword>  | automatically open google chrome to show result (disabled)|
 
 ## how to contribute
 How to compile:
