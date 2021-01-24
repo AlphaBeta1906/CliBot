@@ -17,9 +17,8 @@ voidCommand = {
 	"name" : void.name,
 	"ip" : void.ip,
 	"clr" : void.clr,
-	#"jokes" : api.Jokes,
-	#"covid" : api.covid,
-	"ufact" : api.UselessFact
+	"ufact" : api.UselessFact,
+	"bored" : api.bored
 }
 
 NonVoidCommand = {
