@@ -14,6 +14,11 @@ well i even don't know what is this and why i create it, it just a program that 
 |  weather < city >  |  return a report of current weather in city (disabled)|-->
 
 
+### web scrapping(hasn't finsih yet)
+|command | output  |
+|---|---|
+| search <keyword>  | automatically open google chrome to show result (disabled)|
+
 ### other's
 |command | output  |
 |---|---|
@@ -21,11 +26,6 @@ well i even don't know what is this and why i create it, it just a program that 
 |  name | return your machine name|
 |  clr  | clear the terminal|
 |  quit | quit program |
-
-### web scrapping(hasn't finsih yet)
-|command | output  |
-|---|---|
-| search <keyword>  | automatically open google chrome to show result (disabled)|
 
 ## how to contribute
 How to compile:
