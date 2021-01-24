@@ -12,6 +12,6 @@ def Handle(url):
 			return "not found"
 		else:
 			return NotFound
-	except Exc:
+	except:
 		return NotFound
 #def WithKey(url,key,query):
