@@ -1,7 +1,11 @@
 
 import api
 import voidCommand as void
-#import WebScrapping as web
+import WebScrapping as web
+
+#im = Image.open(requests.get("https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",stream = True).raw)
+#im.show()
+#()
 
 #non void command
 #well, it's just experimental
@@ -17,9 +21,11 @@ voidCommand = {
 	#"covid" : api.covid,
 	"ufact" : api.UselessFact
 }
+
 NonVoidCommand = {
 	"hello" : Hello,
 }
+
 searchCommand = {
 	#"search" : web.search,
 	#"weather" : api.weather
@@ -44,6 +50,10 @@ def main():
 		else:
 			print("Unknown command")
 
+
+
 if __name__ == '__main__':
 	main()
+
+
 #()
