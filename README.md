@@ -7,10 +7,12 @@ well i even don't know what is this and why i create it, it just a program that 
 ### Api
 |command   | output  |
 |---|---|
-|  covid|  return the report of covid-19 data (disabled)|
-|  jokes | return a random jokes (disabled)|
-|  weather < city >  |  return a report of current weather in city (disabled)|
 |  ufact | return random useless fact :p  |
+|  bored | return a suggestion of activity |
+<!---|  covid|  return the report of covid-19 data (disabled)|
+|  jokes | return a random jokes (disabled)|
+|  weather < city >  |  return a report of current weather in city (disabled)|-->
+
 
 ### other's
 |command | output  |
