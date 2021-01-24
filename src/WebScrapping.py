@@ -11,6 +11,4 @@ def search(keyword):
 	browser = webdriver.Chrome()
 	browser.maximize_window()
 	keyword = split(keyword)
-	for i in range(1):
-		 matched_elements = browser.get("https://www.google.com/search?q=" +keyword + "&start=" + str(i))
-		
+	browser.get("https://www.google.com/search?q=" +keyword + "&start=" + str(1))

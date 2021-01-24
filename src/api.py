@@ -17,7 +17,7 @@ def covid():
 		if response.status_code:
 			myDict = response.json()
 			data = myDict[0]
-			print("\nCovid 19 lastest data," + str(date.today())) 
+			print("\nCovid 19 lastest data : " + str(date.today())) 
 			print("confirmed : " + str(data['confirmed']))
 			print("Deaths : " + str(data['deaths']))
 			print("Recovered : " + str(data['recovered']))

@@ -132,4 +132,5 @@ dmypy.json
 config.py
 **src/__pycache__
 backup.txt
+git.sh
 #ApiModule.py
