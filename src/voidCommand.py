@@ -3,6 +3,7 @@ from datetime import date
 import os
 
 #void command
+
 hostname = socket.gethostname()
 def Date():
 	today = date.today()
@@ -15,7 +16,7 @@ def clr():
 	if os.name =='nt':
 		os.system('cls')
 	else:
-		os.system('clear') 
+		os.system('clear')
   
   
 #()
