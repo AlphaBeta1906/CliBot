@@ -9,7 +9,7 @@ git commit -m "$message"
 echo 'enter branch'
 read  branch
 
-git push origin $branch
+git push origin $branch:edit
 
 echo 'finish'
 
