@@ -23,4 +23,9 @@ def UselessFact():
 def bored():
 	url = "https://www.boredapi.com/api/activity"
 	myDict = Handle(url)
-	print("are you bored? try this activity : " + myDict['activity'])
+	print("are you bored? try this activity : \n" + "activity name : "+ myDict['activity'])
+	print("type : " + myDict['type'])
+	print("number of partcipant : " + str(myDict['participants']))
+	print("price : " + str(myDict['price']))
+	link = myDict['link'] if myDict['link'] != "" else "none"
+	print("link : " + link + "\n")
