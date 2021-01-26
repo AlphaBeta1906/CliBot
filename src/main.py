@@ -24,7 +24,7 @@ voidCommand = {
 NonVoidCommand = {
 	"hello" : Hello,
 	"search" : web.search,
-	"calc" : Calc.converter
+	"math" : Calc.converter,
 }
 
 void.clr()
