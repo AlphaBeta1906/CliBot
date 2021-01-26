@@ -2,9 +2,9 @@ import api
 import voidCommand as void
 import WebScrapping as web
 import Calc
+from colorama import Fore,Style,init
+init(convert=True)
 
-#im = Image.open(requests.get("https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",stream = True).raw)
-#im.show()
 #()
 
 #non void command
@@ -24,17 +24,20 @@ voidCommand = {
 NonVoidCommand = {
 	"hello" : Hello,
 	"search" : web.search,
-	"math" : Calc.converter,
+	"wikped": web.wikipedia,
+	"link" : web.link,
+	"math" : Calc.converter
 }
 
 void.clr()
-print("CliBot [ver: dev-Version]")
-print("(c) 2021\n")
+print(Fore.GREEN + "CliBot [ver: dev-Version]")
+print(Fore.YELLOW + Style.DIM + "(c) 2021")
 def main():
 	while True:
+		print(Fore.WHITE)
 		Input = input("type your input ")
+		Input =  Input.lstrip()
 		Input = Input.split(' ')
-
 		if Input[0].lower() in voidCommand:
 			voidCommand[Input[0].lower()]()
 			if len(Input) >= 2:
@@ -47,7 +50,7 @@ def main():
 			break
 
 		else:
-			print("Unknown command")
+			print(Fore.RED + "Unknown command: " + Input[0] )
 
 if __name__ == '__main__':
 	main()

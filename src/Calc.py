@@ -6,7 +6,6 @@ import math
 	argument = argument[0].split()
 	return argument[0]
 """
-
 def simple(command,value):
 	res = value[0]
 	for i in range (0,len(value)):
@@ -22,10 +21,11 @@ def simple(command,value):
 			try:
 				res /= value[i]
 			except ZeroDivisionError:
-				print( "divison by zero error")
+				print("divison by zero error")
+				res = 0
 		else:
 			print("unknown command")
-			res = ""
+			res = None
 			break
 	print("result : " + str(res) + "\n")
 
