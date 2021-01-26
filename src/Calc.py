@@ -8,7 +8,6 @@ import math
 """
 
 def simple(command,value):
-	Simple = True
 	res = value[0]
 	for i in range (0,len(value)):
 		if i == 0:
