@@ -9,8 +9,9 @@ git commit -m "$message"
 echo 'enter branch'
 read  branch
 
-git push origin $branch:edit
+echo 'enter origin branch'
+read originBranch
+
+git push origin $branch:$originBranch
 
 echo 'finish'
-
-
