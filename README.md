@@ -35,7 +35,7 @@ How to compile:
 > git clone https://github.com/AlphaBeta1906/CliBot.git #clone the project
 > cd path/where/youClone/this #go to the dir where you clone this project
 > venv/scripts/activate #for windows
-> venv/bin/activate/ #for linux
+> venv/bin/activate #for linux
 > python src/main.py #run the main scripts
 ```
 
