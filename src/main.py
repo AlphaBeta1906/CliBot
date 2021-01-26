@@ -28,6 +28,8 @@ NonVoidCommand = {
 }
 
 void.clr()
+print("CliBot [ver: dev-Version]")
+print("(c) 2021\n")
 def main():
 	while True:
 		Input = input("type your input ")
