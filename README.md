@@ -2,7 +2,7 @@
 Is this a cli?is this a bot?I don't know, this is just releasing boredom during the pandemic¯\_(ツ)_/
 
 ## About CliBot
-well i even don't know what is this and why i create it, it just a program that have several command, like displaying covid data,weather report(using an api ofc :p) or something else
+well i even don't know what is this and why i create it, it just a program that have several simple command which can help your work or just playing around with command :D
 # features(for now)
 ### Api
 |command   | output  |
@@ -17,7 +17,9 @@ well i even don't know what is this and why i create it, it just a program that 
 ### web scrapping(hasn't finsih yet)
 |command | output  |
 |---|---|
-| search <keyword>  | automatically open google chrome to show result (disabled)|
+| search <keyword>  | automatically open google chrome to show result|
+| wikped <keyword>  | automatically open wikipedia search to show result|
+| link <url> | find url e.g github.com,stackoverflow.com etc and not a keyword|
 
 ### other's
 |command | output  |
@@ -29,16 +31,17 @@ well i even don't know what is this and why i create it, it just a program that 
 
 ## how to contribute
 How to compile:
-  1. clone this repository either using github gui,cli,etc.
-  2. create the virtual enviroment using ```virtualenv.```
-  3. type command ```pip install -r requirements.txt``` or ```pip3 install -r requirements.txt``` to install pip module.
-  4. when you want to edit or add feature make sure to comment all command in dict that used api key                                     to prevent error.<br/>
+```bash
+> git clone https://github.com/AlphaBeta1906/CliBot.git #clone the project
+> cd path/where/youClone/this #go to the dir where you clone this project
+> venv/scripts/activate #for windows
+> venv/bin/activate/ #for linux
+> python src/main.py #run the main scripts
+```
 
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 *note  : this program is writen in python 3.9 so make sure use the same version to prevent error*<br/>
-
-
-*note again : you can add api as long as they NOT required key*
+*note again : you can add api as long as they **NOT** required key*
   
 ## License
 [MIT](https://github.com/AlphaBeta1906/CliBot/blob/master/LICENSE)
