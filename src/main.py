@@ -1,5 +1,5 @@
 import api
-import voidCommand as void
+import SimpleCommand as simple
 import WebScrapping as web
 import Calc
 from colorama import Fore,Style,init
@@ -7,21 +7,21 @@ init(convert=True)
 
 #()
 
-#non void command
+#non simple command
 #well, it's just experimental
 def Hello(name):
 	print("Hello " + name)
 
-voidCommand = {
-	"date" : void.Date,
-	"name" : void.name,
-	"ip" : void.ip,
-	"clr" : void.clr,
+simpleCommand = {
+	"date" : simple.Date,
+	"name" : simple.name,
+	"ip" : simple.ip,
+	"clr" : simple.clr,
 	"ufact" : api.UselessFact,
 	"bored" : api.bored
 }
 
-NonVoidCommand = {
+NonsimpleCommand = {
 	"hello" : Hello,
 	"search" : web.search,
 	"wikped": web.wikipedia,
@@ -29,7 +29,7 @@ NonVoidCommand = {
 	"math" : Calc.converter
 }
 
-void.clr()
+simple.clr()
 print(Fore.GREEN + "CliBot [ver: dev-Version]")
 print(Fore.YELLOW + Style.DIM + "(c) 2021")
 def main():
@@ -38,13 +38,13 @@ def main():
 		Input = input("type your input ")
 		Input =  Input.lstrip()
 		Input = Input.split(' ')
-		if Input[0].lower() in voidCommand:
-			voidCommand[Input[0].lower()]()
+		if Input[0].lower() in simpleCommand:
+			simpleCommand[Input[0].lower()]()
 			if len(Input) >= 2:
 				print("anything that come after command will be ignored")
 
-		elif Input[0].lower() in NonVoidCommand:
-			NonVoidCommand[Input[0].lower()](Input[1:])
+		elif Input[0].lower() in NonsimpleCommand:
+			NonsimpleCommand[Input[0].lower()](Input[1:])
 
 		elif Input[0] == "quit":
 			break
