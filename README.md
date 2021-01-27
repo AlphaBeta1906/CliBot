@@ -3,7 +3,7 @@ Is this a cli?is this a bot?I don't know, this is just releasing boredom during 
 
 ## About CliBot
 well i even don't know what is this and why i create it, it just a program that have several simple command which can help your work or just playing around with command :D
-# features(for now)
+# available commands(for now)
 ### Api
 |command   | output  |
 |---|---|
@@ -14,12 +14,26 @@ well i even don't know what is this and why i create it, it just a program that 
 |  weather < city >  |  return a report of current weather in city (disabled)|-->
 
 
-### web scrapping(hasn't finsih yet)
+### web scrapping
 |command | output  |
 |---|---|
 | search <keyword>  | automatically open google chrome to show result|
 | wikped <keyword>  | automatically open wikipedia search to show result|
 | link <url> | find url e.g github.com,stackoverflow.com etc and not a keyword|
+  
+### math
+to use this command you must type ```math``` followed by command below 
+|command | output  |
+|---|---|
+| sum  | sum of all number |
+| subs | subs of all number |
+| mult | multipication of all number |
+| div | division of all number |
+| avg | avearage of all number |
+
+after input the command above it must followed by series of number delimited by ```,```
+example : ``` math sums 8,9,5 ``` 
+
 
 ### other's
 |command | output  |
