@@ -1,5 +1,6 @@
 import math
-
+from colorama import Fore,Style,init 
+init(convert=True)
 #()
 """
 	print(argument[0])
@@ -22,10 +23,11 @@ def simple(command,value):
 			try:
 				res /= value[i]
 			except ZeroDivisionError:
-				print( "divison by zero error")
+				print(Fore.RED + "divison by zero error!")
+				res = 0
 		else:
-			print("unknown command")
-			res = ""
+			print(Fore.RED + "unknown command :" + command)
+			res = None
 			break
 	print("result : " + str(res) + "\n")
 
@@ -37,16 +39,19 @@ calc = {
 }
 
 def converter(argument):
-	array = argument[1].split(',')
-	#array = argument[1].replace(',','')
-	cmd = argument[0]
 	try:
-		for i in range(0,len(array)):
-			array[i] = float(array[i])
-	except ValueError:
-		print("Value error,there are letter in your number")
-	else:
+		array = argument[1].split(',')
+		#array = argument[1].replace(',','')
+		cmd = argument[0]
 		try:
-			calc[cmd](array)
-		except KeyError:
-			simple(cmd,array)
+			for i in range(0,len(array)):
+				array[i] = float(array[i])
+		except ValueError:
+			print(Fore.RED + "Value error : your value is not number!")
+		else:
+			try:
+				calc[cmd](array)
+			except KeyError:
+				simple(cmd,array)
+	except IndexError:
+		print(Fore.RED + "IndexError: your number/value is empty or not a number!")
