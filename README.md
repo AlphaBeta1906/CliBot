@@ -30,12 +30,19 @@ well i even don't know what is this and why i create it, it just a program that 
 |  quit | quit program |
 
 ## how to contribute
+requirement :
+1. [git](https://git-scm.com/downloads) to clone this project, but you can github [desktop](https://desktop.github.com/) too
+2. ```venv``` use ```pip install virtualenv``` if not installed in your machine
+3. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
+4. code/text editor
+
 How to compile:
 ```bash
 > git clone https://github.com/AlphaBeta1906/CliBot.git #clone the project
 > cd path/where/youClone/this #go to the dir where you clone this project
-> venv/scripts/activate #for windows
-> venv/bin/activate #for linux
+> venv/scripts/activate #activating virtual enviroment for windows
+> venv/bin/activate #for activating virtual enviroment for linux
+> pip install -r requirements.txt
 > python src/main.py #run the main scripts
 ```
 
