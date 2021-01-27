@@ -31,7 +31,7 @@ well i even don't know what is this and why i create it, it just a program that 
 
 ## how to contribute
 requirement :
-1. [git](https://git-scm.com/downloads),to clone this project, but you can also use  [github desktop](https://desktop.github.com/) too
+1. [git](https://git-scm.com/downloads) to clone this project, but you can github [desktop](https://desktop.github.com/) too
 2. ```venv``` use ```pip install virtualenv``` if not installed in your machine
 3. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
 4. code/text editor
