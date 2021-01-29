@@ -2,32 +2,44 @@ import api
 import SimpleCommand as simple
 import WebScrapping as web
 import Calc
+#import File
 from colorama import Fore,Style,init
 init(convert=True)
 
 #()
 
-#non simple command
+
 #well, it's just experimental
 def Hello(name):
 	print("Hello " + name)
 
+#just command, argument will be ignored
 simpleCommand = {
-	"date" : simple.Date,
-	"name" : simple.name,
-	"ip" : simple.ip,
-	"clr" : simple.clr,
-	"ufact" : api.UselessFact,
-	"bored" : api.bored
+	"date":simple.Date,
+	"name":simple.name,
+	"ip":simple.ip,
+	"clr":simple.clr,
+	"ufact":api.UselessFact,
+	"bored":api.bored
 }
 
-NonsimpleCommand = {
-	"hello" : Hello,
-	"search" : web.search,
-	"wikped": web.wikipedia,
-	"link" : web.link,
-	"math" : Calc.converter
-}
+#NonVoidCommand aka command that need argument
+NonVoidCommand = {
+	"hello":Hello,
+	"search":web.search,
+	"wikped":web.wikipedia,
+	"link":web.link,
+	"math":Calc.converter
+}	
+"""
+following command is suppose to become file handling command
+which hasn't finish yet
+	"cfile":File.cfile,
+	"set" : File.setPath,
+	"dfile" : File.dfile
+"""
+
+
 
 simple.clr()
 print(Fore.GREEN + "CliBot [ver: dev-Version]")
@@ -43,8 +55,8 @@ def main():
 			if len(Input) >= 2:
 				print("anything that come after command will be ignored")
 
-		elif Input[0].lower() in NonsimpleCommand:
-			NonsimpleCommand[Input[0].lower()](Input[1:])
+		elif Input[0].lower() in NonVoidCommand:
+			NonVoidCommand[Input[0].lower()](Input[1:])
 
 		elif Input[0] == "quit":
 			break
