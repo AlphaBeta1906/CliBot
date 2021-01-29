@@ -1,19 +1,28 @@
 import requests
+from requests.exceptions import Timeout
 import json
+from colorama import Fore,init
+init(convert=True)
 
-NotFound = "not found"
 def Handle(url):
 	try:
-		response = requests.get(url)
+		response = requests.get(url, timeout = 10)
 		result = response.json()
 		if response.status_code == 200:
 			return result
 		elif response.status_code == 404:
 			return "not found"
+		elif response.status_code == 500:
+			return "server error"
 		else:
-			return NotFound
-	except:
-		return NotFound
+			return "something went wrong"
+	except Timeout:
+		return "connection timeout"
+	except requests.exceptions.ConnectionError:
+		return "connection error"
+	except requests.exceptions.TooManyRedirects:
+		return "to many redirects"
+
 
 def UselessFact():
 	try:
@@ -21,7 +30,7 @@ def UselessFact():
 		myDict = Handle(url)
 		print("here a random useless fact : " + myDict['text'] + "\n")
 	except TypeError:
-		print("error")
+		print(Fore.RED + myDict)
 
 
 def bored():
@@ -35,4 +44,4 @@ def bored():
 		link = myDict['link'] if myDict['link'] != "" else "none"
 		print("link : " + link + "\n")
 	except TypeError:
-		print("error")
+		print(Fore.RED + myDict)
