@@ -14,12 +14,10 @@ read  message
 
 git commit -m "$message"
 
-echo 'enter local branch'
-read  branch
 
 echo 'enter origin branch'
 read originBranch
 
-git push origin $branch:$originBranch
+git push origin master:$originBranch
 
 echo 'finish'
