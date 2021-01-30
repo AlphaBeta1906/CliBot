@@ -1,6 +1,4 @@
 import requests
-from requests.exceptions import Timeout
-import json
 from colorama import Fore,init
 init(convert=True)
 
@@ -16,13 +14,12 @@ def Handle(url):
 			return "server error"
 		else:
 			return "something went wrong"
-	except Timeout:
+	except requests.exceptions.Timeout:
 		return "connection timeout"
 	except requests.exceptions.ConnectionError:
 		return "connection error"
 	except requests.exceptions.TooManyRedirects:
 		return "to many redirects"
-
 
 def UselessFact():
 	try:
@@ -31,7 +28,6 @@ def UselessFact():
 		print("here a random useless fact : " + myDict['text'] + "\n")
 	except TypeError:
 		print(Fore.RED + myDict)
-
 
 def bored():
 	try:

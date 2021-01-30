@@ -130,7 +130,6 @@ dmypy.json
 
 #from my program
 config.py
-File.py
 **src/__pycache__
 backup.txt
 

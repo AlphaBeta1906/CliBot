@@ -28,7 +28,7 @@ def wikipedia(keyword):
 	url = "https://en.wikipedia.org/w/index.php?search=" + keyword + "&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1"
 	startBrowser(url)
 
-def link(keyword):
-	keyword = "".join(keyword)
-	url = "http://" + keyword + "/"
+def link(Link):#must link/url not keyword 
+	Link = "".join(Link)
+	url = "http://" + Link + "/"
 	startBrowser(url)
