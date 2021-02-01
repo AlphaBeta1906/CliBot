@@ -35,9 +35,11 @@ def simple(command,value):
 def avg(value):
 	print("average result : " + str((round(sum(value)/len(value),2))) + "\n" )
 
+
 #calc command dict
 calc = {
-	"avg" : avg
+	"avg":avg,
+	"root":root
 }
 """
 all input from 'math' command in main.py will go trough this function

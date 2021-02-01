@@ -55,8 +55,9 @@ example : ``` math sums 8,9,5 ```
 requirement :
 1. [git](https://git-scm.com/downloads) to clone this project
 2. virtual evniroment, use ```pip install virtualenv``` if not installed in your machine
-3. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
-4. code/text editor to write the code
+3. Chrome web driver, to run webscrapping.py
+4. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
+5. code/text editor to write the code
 
 How to compile:
 ```bash
