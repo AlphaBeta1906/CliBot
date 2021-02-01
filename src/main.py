@@ -4,6 +4,7 @@ import WebScrapping as web
 import Calc
 import File
 from colorama import Fore,Style,init
+import os
 init(convert=True)
 
 #()
@@ -20,8 +21,8 @@ simpleCommand = {
 	"ip":simple.ip,
 	"clr":simple.clr,
 	"ufact":api.UselessFact,
-	"bored":api.bored
-}
+	"bored":api.bored,
+	}
 
 #NonVoidCommand aka command that need argument
 NonVoidCommand = {
@@ -33,17 +34,9 @@ NonVoidCommand = {
 	"cfile":File.cfile,
 	"set" : File.setPath,
 	"dfile": File.dfile,
-	"cdir":File.cdir
-}
-"""
-following command is suppose to become file handling command
-which hasn't finish yet
-	"cfile":File.cfile,
-	"set" : File.setPath,
-	"dfile" : File.dfile
-"""
-
-
+	"cdir":File.cdir,
+	"ddir":File.ddir
+	}
 
 simple.clr()
 print(Fore.GREEN + "CliBot [ver: dev-Version]")
@@ -52,6 +45,7 @@ def main():
 	while True:
 		try:
 			print(Fore.WHITE)
+			print("current path : " + File.Path)
 			Input = input("type your input ")
 			Input =  Input.lstrip()
 			Input = Input.split(' ')
@@ -70,6 +64,8 @@ def main():
 				print(Fore.RED + "Unknown command: " + Input[0] )
 		except KeyboardInterrupt:
 			break
+		except EOFError:
+			break;
 
 if __name__ == '__main__':
 	main()
