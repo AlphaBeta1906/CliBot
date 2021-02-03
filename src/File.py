@@ -2,9 +2,10 @@ import os
 import getpass
 import shutil
 import subprocess
-from colorama import Fore , init
+from colorama import Fore, init
+
 init(convert=True)
-#()
+# ()
 Home = "C:/Users/" + getpass.getuser() + "/"
 
 """
@@ -19,73 +20,88 @@ delete file : cfile <path + filename and ext or just filename and ext>
 create directory/folder : cdir <folderName> <file for the folder(optional)>
 """
 
+
 def setPath(argument):
-	global Path
-	Path = Home
-	if argument[0] == "home":	
-		Path = Home
-	else:
-		argument = "/".join(argument)
-		if os.path.exists(Home + argument) and os.path.isdir(Home + argument) and argument != Home:
-			Path = os.path.join(Home + argument)
-		else:
-			print(Fore.RED + "Error :" + Path +" not exist")
-			Path = Home
+    global Path
+    Path = Home
+    if argument[0] == "home":
+        Path = Home
+    else:
+        argument = "/".join(argument)
+        if (
+            os.path.exists(Home + argument)
+            and os.path.isdir(Home + argument)
+            and argument != Home
+        ):
+            Path = os.path.join(Home + argument)
+        else:
+            print(Fore.RED + "Error :" + Path + " not exist")
+            Path = Home
 
-#cfile <filename.format> |create one either empty file or one one line file
+
+# cfile <filename.format> |create one either empty file or one one line file
 def cfile(argument):
-	content = " ".join(argument[1:])
-	path = os.path.join(Path,argument[0])
-	try:
-		if not os.path.exists(path):
-			file = open(path,"w")
-			file.write(content)
-			file.close()
-			print("file succesfully created at  : " + path)
-		else:
-			print("file or folder with same name already exist")
-	except FileNotFoundError:
-		print(Fore.RED + "error : " + path + "not found")
+    content = " ".join(argument[1:])
+    path = os.path.join(Path, argument[0])
+    try:
+        if not os.path.exists(path):
+            file = open(path, "w")
+            file.write(content)
+            file.close()
+            print("file succesfully created at  : " + path)
+        else:
+            print("file or folder with same name already exist")
+    except FileNotFoundError:
+        print(Fore.RED + "error : " + path + "not found")
 
-#example : dfile <filename> | delete only one file
+
+# example : dfile <filename> | delete only one file
 def dfile(argument):
-	argument = "/".join(argument)
-	path = os.path.join(Path,argument)
-	if os.path.exists(path) and os.path.isfile(path):
-		os.remove(path)
-		print("succesfully delete : " + argument)
-	else:
-		print(Fore.RED + "error " + argument + " maybe is not a file or not exist")
+    argument = "/".join(argument)
+    path = os.path.join(Path, argument)
+    if os.path.exists(path) and os.path.isfile(path):
+        os.remove(path)
+        print("succesfully delete : " + argument)
+    else:
+        print(Fore.RED + "error " + argument + " maybe is not a file or not exist")
 
-#example : cdir file.txt file2.txt.... | delimeted by space
+
+# example : cdir file.txt file2.txt.... | delimeted by space
 def cdir(argument):
-	files = argument[1:]
-	path = os.path.join(Path,argument[0])
-	try:
-		os.mkdir(path)
-		for i in range(0,len(files)):
-			file = open(path+"/"+files[i],"w")
-			file.write("")
-			file.close()
-	except FileNotFoundError:
-		print("invalid command")
-	except FileExistsError:
-		print("dir already exist")
-	else: 
-		print("folder created at " + path)
+    files = argument[1:]
+    path = os.path.join(Path, argument[0])
+    try:
+        os.mkdir(path)
+        for i in range(0, len(files)):
+            file = open(path + "/" + files[i], "w")
+            file.write("")
+            file.close()
+    except FileNotFoundError:
+        print("invalid command")
+    except FileExistsError:
+        print("dir already exist")
+    else:
+        print("folder created at " + path)
 
-#exampl ddir <folderName) | delete one folder
+
+# exampl ddir <folderName) | delete one folder
 def ddir(argument):
-	argument = "/".join(argument)
-	path = os.path.join(Path,argument)
-	try:
-		shutil.rmtree(path)
-	except FileNotFoundError:
-		print(Fore.RED + "Error : " + argument + " not exist")
-	except OSError:
-		print(Fore.RED + "Error:" + argument + " the system cannot find the path specified")
-	else:
-		print("folder deleted at " + path)
+    argument = "/".join(argument)
+    path = os.path.join(Path, argument)
+    try:
+        shutil.rmtree(path)
+    except FileNotFoundError:
+        print(Fore.RED + "Error : " + argument + " not exist")
+    except OSError:
+        print(
+            Fore.RED
+            + "Error:"
+            + argument
+            + " the system cannot find the path specified"
+        )
+    else:
+        print("folder deleted at " + path)
+
 
 """
 def ShowList():
@@ -93,5 +109,5 @@ def ShowList():
 	p = subprocess.Popen(['dir',Path])
 	p.wait()
 """
-setPath(Home)#initialize deafult path
-#()wtf sublime text can't use : ()
+setPath(Home)  # initialize deafult path
+# ()wtf sublime text can't use : ()

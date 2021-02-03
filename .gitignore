@@ -132,4 +132,6 @@ dmypy.json
 config.py
 **src/__pycache__
 backup.txt
+git.sh
+install.sh
 
