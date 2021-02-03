@@ -1,3 +1,4 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/alphabeta1906/clibot/badge)](https://www.codefactor.io/repository/github/alphabeta1906/clibot)
 # CliBot
 Is this a cli?is this a bot?I don't know, this is just releasing boredom during the pandemic¯\_(ツ)_/
 
@@ -17,9 +18,9 @@ well i even don't know what is this and why i create it, it just a program that 
 ### web scrapping
 |command | output  |
 |---|---|
-| search <keyword>  | automatically open google chrome to show result|
-| wikped <keyword>  | automatically open wikipedia search to show result|
-| link <url> | find url e.g github.com,stackoverflow.com etc and not a keyword|
+| search < keyword > | automatically open google chrome to show result|
+| wikped < keyword >  | automatically open wikipedia search to show result|
+| link < url/link > | find url e.g github.com,stackoverflow.com etc and not a keyword|
   
 ### math
 to use these command you must type ```math``` followed by command below 
@@ -38,10 +39,10 @@ example : ``` math sums 8,9,5 ```
 ### file handling
 |command | output  |
 |---|---|
-| cfile <filename or path to the file> <content(optional)> |create file in current path example : `cfile hello.txt this is content`. Hello is file name, and the rest will be content(one line) |
-| dfile <filename or path to the file> | delete file in current path |
-| cdir <folder name > | create folder in current path |
-| set <dir1> <subDir1> <another Subdir> | change the current path, you can manipulate your file/folder in current directory,you can use space or `/` as delimiter . example : `set desktop MyFolder` or `set/desktop/MyFolder` . unfortunately you can acces sub folder of current path you set,you must re-set again(arrow up in cmd) and add your sub folder of subfolder, it may be fixed in the future :grin: |
+| cfile < filename or path to the file > < content(optional) > |create file in current path example : `cfile hello.txt this is content`. Hello is file name, and the rest will be content(one line) |
+| dfile < filename or path to the file > | delete file in current path |
+| cdir < folder name > | create folder in current path |
+| set < dir1 > < subDir1 > < subdir of subDir1 > | change the current path, you can manipulate your file/folder in current directory,you can use space or `/` as delimiter . example : `set desktop MyFolder` or `set/desktop/MyFolder` . unfortunately you can acces sub folder of current path you set,you must re-set again(arrow up in cmd) and add your sub folder of subfolder, it may be fixed in the future :grin: |
 
 ### other's
 |command | output  |
@@ -50,6 +51,7 @@ example : ``` math sums 8,9,5 ```
 |  name | return your machine name|
 |  clr  | clear the terminal|
 |  quit | quit program |
+|  ip   | show your ip |
 
 ## how to contribute
 requirement :
