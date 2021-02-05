@@ -87,7 +87,7 @@ def ddir(argument):
         shutil.rmtree(path)
     except FileNotFoundError:
         print(Fore.RED + "Error : " + argument + " not exist")
-    except OSError as e:
+    except OSError:
         print(Fore.RED + "Error: permision denied")
     else:
         print("folder deleted at " + path)

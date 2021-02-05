@@ -42,17 +42,17 @@ def avg(value):
 
 
 def root(value):
-    for i in range(len(value)):
+    for i in enumerate(len(value)):
         print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
 
 
 def square(value):
     print(
-        "result of "
-        + str(value[0])
-        + "to the power of "
-        + str(value[1])
-        + " :"
+        "result "
+        + str(int(value[0]))
+        + " power of "
+        + str(int(value[1]))
+        + " : "
         + str(pow(value[0], value[1]))
     )
     if len(value) > 2:
