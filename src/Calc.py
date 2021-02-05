@@ -1,5 +1,5 @@
 import math
-from colorama import Fore, Style, init
+from colorama import Fore, init
 
 init(convert=True)
 # ()
@@ -41,10 +41,26 @@ def avg(value):
     print("average result : " + str((round(sum(value) / len(value), 2))) + "\n")
 
 
+def root(value):
+    for i in enumerate(len(value)):
+        print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
+
+
+def square(value):
+    print(
+        "result "
+        + str(int(value[0]))
+        + " power of "
+        + str(int(value[1]))
+        + " : "
+        + str(pow(value[0], value[1]))
+    )
+    if len(value) > 2:
+        print("the other(s) argument is ignored")
+
+
 # calc command dict
-calc = {
-    "avg": avg,
-}
+calc = {"avg": avg, "root": root, "sqr": square}
 """
 all input from 'math' command in main.py will go trough this function
 they will be checked,converted and splited which will be used in math operation

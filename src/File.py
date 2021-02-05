@@ -1,7 +1,6 @@
 import os
 import getpass
 import shutil
-import subprocess
 from colorama import Fore, init
 
 init(convert=True)
@@ -28,11 +27,7 @@ def setPath(argument):
         Path = Home
     else:
         argument = "/".join(argument)
-        if (
-            os.path.exists(Home + argument)
-            and os.path.isdir(Home + argument)
-            and argument != Home
-        ):
+        if os.path.exists(Home + argument) and os.path.isdir(Home + argument):
             Path = os.path.join(Home + argument)
         else:
             print(Fore.RED + "Error :" + Path + " not exist")
@@ -93,12 +88,7 @@ def ddir(argument):
     except FileNotFoundError:
         print(Fore.RED + "Error : " + argument + " not exist")
     except OSError:
-        print(
-            Fore.RED
-            + "Error:"
-            + argument
-            + " the system cannot find the path specified"
-        )
+        print(Fore.RED + "Error: permision denied")
     else:
         print("folder deleted at " + path)
 
