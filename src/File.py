@@ -1,12 +1,11 @@
 import os
 import getpass
 import shutil
-import subprocess
 from colorama import Fore, init
 
 init(convert=True)
 # ()
-Home = "C:/Users/" + getpass.getuser() + "/"
+Home = "C:/Users/" + getpass.getuser() + "/" # for default path is for windows
 
 """
 set dir : set <path to dir> you can use / or space to write it
