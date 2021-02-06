@@ -31,10 +31,12 @@ def clr():
         os.system("clear")
 
 
-def help():
+def Help():
     WebScrapping.startBrowser(
         "https://github.com/AlphaBeta1906/CliBot/blob/master/README.md"
     )
+
+
 
 
 # ()

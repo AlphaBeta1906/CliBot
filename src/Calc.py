@@ -43,8 +43,8 @@ def avg(value):
 
 
 def root(value):
-        for i in range(len(value)):
-            print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
+    for i in range(len(value)):
+        print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
 
 
 def square(value):
@@ -63,6 +63,8 @@ def square(value):
     )
     if len(value) > 2:
         print("the other(s) argument is ignored")
+
+
 # calc command dict
 calc = {"avg": avg, "root": root, "sqr": square}
 
@@ -86,7 +88,7 @@ def converter(argument):
         else:
             try:  # check input in command dict
                 calc[cmd](array)
-            except KeyError:  # execute if KeyError was thrown
+            except KeyError:  # execuwte if KeyError was thrown
                 simple(cmd, array)
     except IndexError:
         print(Fore.RED + "IndexError: your number/value is empty or not a number!")
