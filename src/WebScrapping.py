@@ -38,7 +38,6 @@ def wikipedia(keyword):
     startBrowser(url)
 
 
-
 def link(Link):  # must link/url not keyword
     Link = "".join(Link)
     url = "http://" + Link + "/"

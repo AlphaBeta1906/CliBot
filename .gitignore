@@ -131,7 +131,9 @@ dmypy.json
 #from my program
 config.py
 **src/__pycache__
+**src/driver
 backup.txt
 git.sh
 install.sh
+
 
