@@ -41,13 +41,19 @@ def avg(value):
     print("average result : " + str((round(sum(value) / len(value), 2))) + "\n")
 
 
+
 def root(value):
-    for i in enumerate(len(value)):
+    for i in range(len(value)):
         print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
 
 
 def square(value):
     print(
+        "result of "
+        + str(value[0])
+        + "to the power of "
+        + str(value[1])
+        + " :"
         "result "
         + str(int(value[0]))
         + " power of "
@@ -61,6 +67,7 @@ def square(value):
 
 # calc command dict
 calc = {"avg": avg, "root": root, "sqr": square}
+
 """
 all input from 'math' command in main.py will go trough this function
 they will be checked,converted and splited which will be used in math operation
@@ -70,17 +77,18 @@ they will be checked,converted and splited which will be used in math operation
 def converter(argument):
     try:
         array = argument[1].split(",")
+
         # array = argument[1].replace(',','')
         cmd = argument[0]
         try:
             for i in range(0, len(array)):
                 array[i] = float(array[i])
-        except ValueError:  # execute if ValyError was thrown(not number,non exist)
+        except ValueError:  # execute if ValueError was thrown(not number,not exist)
             print(Fore.RED + "Value error : your value is not number!")
         else:
             try:  # check input in command dict
                 calc[cmd](array)
-            except KeyError:  # execute if KeyError was thrown
+            except KeyError:  # execuwte if KeyError was thrown
                 simple(cmd, array)
     except IndexError:
         print(Fore.RED + "IndexError: your number/value is empty or not a number!")

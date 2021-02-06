@@ -1,6 +1,7 @@
 import socket
 from datetime import date
 import os
+import WebScrapping
 
 # void command
 
@@ -28,6 +29,14 @@ def clr():
         os.system("cls")
     else:
         os.system("clear")
+
+
+def Help():
+    WebScrapping.startBrowser(
+        "https://github.com/AlphaBeta1906/CliBot/blob/master/README.md"
+    )
+
+
 
 
 # ()
