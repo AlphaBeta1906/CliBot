@@ -24,7 +24,7 @@ simpleCommand = {
     "clr": simple.clr,
     "ufact": api.UselessFact,
     "bored": api.bored,
-    "help":simple.help
+    "help": simple.help,
 }
 
 # NonVoidCommand aka command that need argument
