@@ -1,7 +1,14 @@
 import requests
 from colorama import Fore, init
+import config
 
 init(convert=True)
+
+"""
+    this module contains some function that will display api to console
+    pay attention to api with keys don't forget to commented they out
+    because they need config module and that's module only own by me
+"""
 
 
 def Handle(url):
@@ -24,13 +31,58 @@ def Handle(url):
         return "to many redirects"
 
 
+# api with keys
+def Jokes():
+    try:
+        url = "https://joke3.p.rapidapi.com/v1/joke"
+        querystring = {"nsfw": "true"}
+
+        headers = {
+            "x-rapidapi-key": config.jokes_key,
+            "x-rapidapi-host": "joke3.p.rapidapi.com",
+        }
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
+
+        if response.status_code:
+            myDict = response.json()
+            print(myDict["content"])
+            print(" ")
+        else:
+            print("something went wrong")
+            print(response.status_code)
+    except:
+        print(Fore.RED + "connection error")
+
+
+# api with keys
+def weather(location):
+    try:
+        location = " ".join(location)
+        complete_url = config.weather_key + "&q=" + location
+        myDict = Handle(complete_url)
+        weather = myDict["weather"][0]
+        temperature = myDict["main"]
+    except TypeError:
+        print(Fore.RED + myDict)
+    else:
+        print("")
+        print("city name : " + location)
+        print("weather : " + weather["main"])
+        print("description : " + weather["description"])
+        print("temperature : " + str(round(temperature["temp"] - 273, 0)) + "°C")
+        print("humidity : " + str(temperature["humidity"]) + "%")
+        print("country : " + myDict["sys"]["country"] + "\n")
+
+
 def UselessFact():
     try:
         url = "https://uselessfacts.jsph.pl/random.json?language=en"
         myDict = Handle(url)
-        print("here a random useless fact : " + myDict["text"] + "\n")
     except TypeError:
         print(Fore.RED + myDict)
+    else:
+        print("here a random useless fact : " + myDict["text"] + "\n")
 
 
 def bored():

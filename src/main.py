@@ -24,6 +24,7 @@ simpleCommand = {
     "ufact": api.UselessFact,
     "bored": api.bored,
     "help": simple.Help,
+    "jokes": api.Jokes,
 }
 
 # NonVoidCommand aka command that need argument
@@ -38,6 +39,7 @@ NonVoidCommand = {
     "dfile": File.dfile,
     "cdir": File.cdir,
     "ddir": File.ddir,
+    "weather": api.weather,
 }
 
 simple.clr()
