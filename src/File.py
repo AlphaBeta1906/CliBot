@@ -5,7 +5,9 @@ from colorama import Fore, init
 
 init(convert=True)
 # ()
-Home = "C:/Users/" + getpass.getuser() + "/" # for default path is for windows
+Home = (
+    "C:/Users/" + getpass.getuser() + "/"
+)  # for now the default path is for windows only
 
 """
 set dir : set <path to dir> you can use / or space to write it
