@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/da81def9583d4a069d22113b95a632a1)](https://app.codacy.com/gh/AlphaBeta1906/CliBot?utm_source=github.com&utm_medium=referral&utm_content=AlphaBeta1906/CliBot&utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/alphabeta1906/clibot/badge)](https://www.codefactor.io/repository/github/alphabeta1906/clibot) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![GitHub top language](https://img.shields.io/github/languages/top/AlphaBeta1906/CliBot)
 # CliBot
