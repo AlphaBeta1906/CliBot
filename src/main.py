@@ -40,6 +40,7 @@ NonVoidCommand = {
     "cdir": File.cdir,
     "ddir": File.ddir,
     "weather": api.weather,
+    "numtrivia": api.NumTrivia,
 }
 
 simple.clr()
