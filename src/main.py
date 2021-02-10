@@ -8,11 +8,7 @@ from colorama import Fore, Style, init
 init(convert=True)
 
 # ()
-
-
-# well, it's just experimental
-def Hello(name):
-    print("Hello " + name)
+# Version 0.0.1
 
 
 # just command, argument will be ignored
@@ -29,7 +25,6 @@ simpleCommand = {
 
 # NonVoidCommand aka command that need argument
 NonVoidCommand = {
-    "hello": Hello,
     "search": web.search,
     "wikped": web.wikipedia,
     "link": web.link,
@@ -40,11 +35,12 @@ NonVoidCommand = {
     "cdir": File.cdir,
     "ddir": File.ddir,
     "weather": api.weather,
+    "numtrivia": api.NumTrivia,
 }
 
 simple.clr()
-print(Fore.GREEN + "CliBot [ver: dev-Version]")
-print(Fore.YELLOW + Style.DIM + "(c) 2021")
+print(Fore.GREEN + "CliBot [ver: v0.0.1]")
+print(Fore.YELLOW + Style.DIM + "Copyright (c) 2021 AlphaBeta MIT License")
 
 
 def main():

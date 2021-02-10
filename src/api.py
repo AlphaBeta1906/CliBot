@@ -67,7 +67,7 @@ def weather(location):
         print(Fore.RED + myDict)
     else:
         print("")
-        print("city name : " + location)
+        print("city name : " + location.lstrip())
         print("weather : " + weather["main"])
         print("description : " + weather["description"])
         print("temperature : " + str(round(temperature["temp"] - 273, 0)) + "°C")
@@ -101,3 +101,18 @@ def bored():
         print("link : " + link + "\n")
     except TypeError:
         print(Fore.RED + myDict)
+
+
+def NumTrivia(value):
+    IsNum = "here's a trivia about number " + value[0] + " : "
+    NoNum = "well,your input is not number so here a random number trivia : "
+    try:
+        query = value[0] if len(value) >= 1 and value[0].isdigit() else "random"
+        message = IsNum if len(value) >= 1 and value[0].isdigit() else NoNum
+        url = "http://numbersapi.com/" + query + "/trivia"
+        response = requests.get(url, timeout=10)
+        print(message + response.text)
+    except requests.exceptions.Timeout:
+        print(Fore.RED + "timeout error")
+    except requests.exceptions.ConnectionError:
+        print(Fore.RED + "Connection error")

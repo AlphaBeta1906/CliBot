@@ -21,7 +21,7 @@ def name():
 
 
 def ip():
-    print("Your local IP addres : " + socket.gethostbyname(hostname))
+    print("Your IP addres : " + socket.gethostbyname(hostname))
 
 
 def clr():
