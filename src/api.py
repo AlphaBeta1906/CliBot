@@ -117,4 +117,3 @@ def NumTrivia(value):
         url = "http://numbersapi.com/" + "random" + "/trivia"
         response = requests.get(url, timeout=10)
         print(response.text)
-

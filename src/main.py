@@ -36,8 +36,7 @@ NonVoidCommand = {
     "ddir": File.ddir,
     "weather": api.weather,
     "numtrivia": api.NumTrivia,
-    "run":simple.run,
-    "locate":api.locate
+    "run": simple.run,
 }
 
 simple.clr()

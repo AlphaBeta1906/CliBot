@@ -37,9 +37,10 @@ def Help():
         "https://github.com/AlphaBeta1906/CliBot/blob/master/README.md"
     )
 
+
 def run(file):
     try:
-        cmd = "python " + os.path.join(File.Path,file[0])
+        cmd = "python " + os.path.join(File.Path, file[0])
         os.system(cmd)
     except KeyboardInterrupt:
         return
