@@ -104,15 +104,17 @@ def bored():
 
 
 def NumTrivia(value):
-    IsNum = "here's a trivia about number " + value[0] + " : "
-    NoNum = "well,your input is not number so here a random number trivia : "
     try:
         query = value[0] if len(value) >= 1 and value[0].isdigit() else "random"
-        message = IsNum if len(value) >= 1 and value[0].isdigit() else NoNum
         url = "http://numbersapi.com/" + query + "/trivia"
         response = requests.get(url, timeout=10)
-        print(message + response.text)
+        print(response.text)
     except requests.exceptions.Timeout:
         print(Fore.RED + "timeout error")
     except requests.exceptions.ConnectionError:
         print(Fore.RED + "Connection error")
+    except IndexError:
+        url = "http://numbersapi.com/" + "random" + "/trivia"
+        response = requests.get(url, timeout=10)
+        print(response.text)
+
