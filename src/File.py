@@ -73,7 +73,7 @@ def cdir(argument):
     path = os.path.join(Path, argument[0])
     try:
         os.mkdir(path)
-        for i in range(0, len(files)):
+        for i in range(len(files)):
             file = open(path + "/" + files[i], "w")
             file.write("")
             file.close()
