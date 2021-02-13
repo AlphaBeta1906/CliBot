@@ -5,9 +5,9 @@ import config
 init(convert=True)
 
 """
-    this module contains some function that will display api to console
-    pay attention to api with keys don't forget to commented they out
-    because they need config module and that's module only own by me
+this module contains some function that will display api to console
+pay attention to api with keys don't forget to commented they out
+because they need config module and that's module only own by me
 """
 
 
@@ -42,7 +42,7 @@ def Jokes():
             "x-rapidapi-host": "joke3.p.rapidapi.com",
         }
 
-        response = requests.request("GET", url, headers=headers, params=querystring)
+        response = requests.request("GET", url, headers=headers, params=querystring,timeout=10)
 
         if response.status_code:
             myDict = response.json()
@@ -51,9 +51,10 @@ def Jokes():
         else:
             print("something went wrong")
             print(response.status_code)
-    except:
+    except requests.exceptions.ConnectionError:
         print(Fore.RED + "connection error")
-
+    except requests.exceptions.Timeout:
+        print(Fore.RED + "connection timeout")
 
 # api with keys
 def weather(location):
