@@ -1,6 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/da81def9583d4a069d22113b95a632a1)](https://app.codacy.com/gh/AlphaBeta1906/CliBot?utm_source=github.com&utm_medium=referral&utm_content=AlphaBeta1906/CliBot&utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/alphabeta1906/clibot/badge)](https://www.codefactor.io/repository/github/alphabeta1906/clibot) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-![GitHub top language](https://img.shields.io/github/languages/top/AlphaBeta1906/CliBot)
 # CliBot
 Is this a cli?is this a bot?I don't know, this is just releasing boredom during the pandemic¯\_(ツ)_/
 
@@ -12,9 +11,9 @@ well i even don't know what is this and why i create it, it just a program that 
 |---|---|
 |  ufact | return random useless fact :p  |
 |  bored | return a suggestion of activity |
-<!---|  covid|  return the report of covid-19 data (disabled)|
 |  jokes | return a random jokes (disabled)|
-|  weather < city >  |  return a report of current weather in city (disabled)|-->
+|  weather < city >  |  return a report of current weather in city (disabled)|
+|  numtrivia < number > | return a trivia about number but if argument remain empty or not a number trivia will be about random number
 
 
 ### web scrapping
@@ -54,14 +53,14 @@ example : ``` math sums 8,9,5 ```
 |  clr  | clear the terminal|
 |  quit | quit program |
 |  ip   | show your ip |
+|  help | open browser and go to the CliBot docs |
 
 ## how to contribute
 requirement :
 1. [git](https://git-scm.com/downloads) to clone this project
-2. virtual evniroment, use ```pip install virtualenv``` if not installed in your machine
-3. Chrome web driver, to run webscrapping.py
-4. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
-5. code/text editor to write the code
+2. virtual evniroment, type ```pip install virtualenv``` if not installed in your machine
+3. of course you need [python](https://www.python.org/downloads/) to compile the program, i use python 3.9 to write this program
+4. code/text editor to write the code
 
 How to compile:
 ```bash
@@ -73,6 +72,7 @@ How to compile:
 > python src/main.py #run the main scripts 
 ```
 
+features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 *note : you can add api as long as they **NOT** required key*
   
