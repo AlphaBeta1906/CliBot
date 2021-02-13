@@ -1,5 +1,5 @@
 import api
-import SimpleCommand as simple
+import SystemCommand as simple
 import WebScrapping as web
 import Calc
 import File
@@ -36,6 +36,7 @@ NonVoidCommand = {
     "ddir": File.ddir,
     "weather": api.weather,
     "numtrivia": api.NumTrivia,
+    "run": simple.run,
 }
 
 simple.clr()
