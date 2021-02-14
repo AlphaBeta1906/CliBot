@@ -66,7 +66,7 @@ def main():
             else:
                 print(Fore.RED + "Unknown command: " + Input[0])
         except KeyboardInterrupt:
-            break
+            break  # change to main() before release
         except EOFError:
             break
 
