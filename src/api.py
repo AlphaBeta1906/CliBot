@@ -10,7 +10,8 @@ pay attention to api with keys don't forget to commented they out
 because they need config module and that's module only own by me
 """
 
-
+# used to handle and simplified request of all api bellow
+# except two jokes api(it's too complicated) and numtrivia(txt formt not json)
 def Handle(url):
     try:
         response = requests.get(url, timeout=10)
@@ -27,8 +28,6 @@ def Handle(url):
         return "connection timeout"
     except requests.exceptions.ConnectionError:
         return "connection error"
-    except requests.exceptions.TooManyRedirects:
-        return "to many redirects"
 
 
 # api with keys
@@ -42,7 +41,9 @@ def Jokes():
             "x-rapidapi-host": "joke3.p.rapidapi.com",
         }
 
-        response = requests.request("GET", url, headers=headers, params=querystring,timeout=10)
+        response = requests.request(
+            "GET", url, headers=headers, params=querystring, timeout=10
+        )
 
         if response.status_code:
             myDict = response.json()
@@ -55,6 +56,7 @@ def Jokes():
         print(Fore.RED + "connection error")
     except requests.exceptions.Timeout:
         print(Fore.RED + "connection timeout")
+
 
 # api with keys
 def weather(location):

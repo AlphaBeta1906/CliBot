@@ -56,7 +56,7 @@ def square(value):
         + str(pow(value[0], value[1]))
     )
     if len(value) > 2:
-        print("the other(s) argument is ignored")
+        print("the other(s) number is ignored")
 
 
 # calc command dict

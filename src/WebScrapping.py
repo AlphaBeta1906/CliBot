@@ -1,7 +1,9 @@
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 import time
+from colorama import init, Fore
 
+init(convert=True)
 
 # browser.get('http://seleniumhq.org/')()
 
@@ -14,11 +16,11 @@ def startBrowser(url):
         browser.get(url)
     except WebDriverException:
         time.sleep(3)
-        print("connection error!!! ")
+        print(Fore.RED + "connection error!!! ")
         try:
             browser.quit()
-        except UnboundLocalError:
-            print("window closed sudennly")
+        except UnboundLocalError:  # throw when user suddenly close window or closed for no
+            print(Fore.RED + "window closed sudennly")
 
 
 def search(keyword):

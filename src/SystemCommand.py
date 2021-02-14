@@ -40,7 +40,9 @@ def Help():
 
 def run(file):
     try:
-        cmd = "python " + os.path.join(File.Path, file[0])
+        cmd = "python " + os.path.join(
+            File.Path, file[0]
+        )  # python command and python file will joined
         os.system(cmd)
     except KeyboardInterrupt:
         return
