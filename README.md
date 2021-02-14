@@ -24,7 +24,7 @@ well i even don't know what is this and why i create it, it just a program that 
 | link < url/link > | find url e.g github.com,stackoverflow.com etc and not a keyword|
   
 ### math
-to use these command you must type ```math``` followed by command below 
+to use these command it must begin with ```math``` keyword followed by command below 
 |command | output  |
 |---|---|
 | sum  | sum of all number |
@@ -33,7 +33,7 @@ to use these command you must type ```math``` followed by command below
 | div | division of all number |
 | avg | avearage of all number |
 
-after input the command above it must followed by series of number delimited by ```,```
+after input the command above it must followed by series of number delimited by ```,``` and ONLY ONE space between operation command and numebers 
 example : ``` math sums 8,9,5 ``` 
 
 
@@ -53,7 +53,7 @@ example : ``` math sums 8,9,5 ```
 |  clr  | clear the terminal|
 |  quit | quit program |
 |  ip   | show your ip |
-|  help | open browser and go to the CliBot docs |
+|  help | open browser and go to the CliBot docs(this readme) |
 
 ## how to contribute
 requirement :
@@ -74,7 +74,4 @@ How to compile:
 
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
-*note : you can add api as long as they **NOT** required key*
-  
-## License
-### [MIT](https://github.com/AlphaBeta1906/CliBot/blob/master/LICENSE)
+*note : you can add api as long as they **NOT** require
