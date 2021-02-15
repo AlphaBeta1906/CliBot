@@ -1,10 +1,16 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/da81def9583d4a069d22113b95a632a1)](https://app.codacy.com/gh/AlphaBeta1906/CliBot?utm_source=github.com&utm_medium=referral&utm_content=AlphaBeta1906/CliBot&utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/alphabeta1906/clibot/badge)](https://www.codefactor.io/repository/github/alphabeta1906/clibot) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-# CliBot
-Is this a cli?is this a bot?I don't know, this is just releasing boredom during the pandemic¯\_(ツ)_/
 
 ## About CliBot
-well i even don't know what is this and why i create it, it just a program that have several simple command which can help your work or just playing around with command :D
+CliBot is a command line tools that can automate a simple task like create folder with multiple file or create a scrapping through command line. The actual reason why i create this because :
+1. i can move freely in cmd, for example if i was inside desktop i can't straightly go to document without go back to deafult path(C:\Users\My-pc) 
+2. I don't know how to create a folder with files inside using cmd
+3. I don't know how to create file with cmd
+4. I thnik it's really cool if i could google search
+5. Of course with api in it 😎
+
+and yes, I create projects for my own needs, but of course you can also use it, and i really glad of that
+
 # available commands(for now)
 ### Api
 |command   | output  |
@@ -54,6 +60,7 @@ example : ``` math sums 8,9,5 ```
 |  quit | quit program |
 |  ip   | show your ip |
 |  help | open browser and go to the CliBot docs(this readme) |
+|  run < python file >  | run python file |
 
 ## how to contribute
 requirement :
@@ -67,11 +74,10 @@ How to compile:
 > git clone https://github.com/AlphaBeta1906/CliBot.git #clone the project
 > cd path/where/youClone/this #go to the dir where you clone this project
 > venv/scripts/activate #activating virtual enviroment for windows
-> venv/bin/activate #for activating virtual enviroment for linux(maybe?)
 > pip install -r requirements.txt #to install the libraries
 > python src/main.py #run the main scripts 
 ```
 
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
-*note : you can add api as long as they **NOT** require
+*note : you can add api as long as they **NOT** require key
