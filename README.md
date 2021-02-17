@@ -7,7 +7,7 @@ CliBot is a command line tools that can automate a simple task like create folde
 2. I don't know how to create a folder with files inside using cmd
 3. I don't know how to create file with cmd
 4. I thnik it's really cool if i could google search
-5. Of course with api in it 😎
+5. Of course with api in it
 
 and yes, I create projects for my own needs, but of course you can also use it, and i really glad of that
 
