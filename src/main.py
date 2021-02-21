@@ -37,6 +37,7 @@ NonVoidCommand = {
     "weather": api.weather,
     "numtrivia": api.NumTrivia,
     "run": simple.run,
+    "ls": File.ShowList,
 }
 
 simple.clr()
@@ -48,7 +49,7 @@ def main():
     while True:
         try:
             print(Fore.WHITE)
-            print("current path : " + File.Path)
+            print("current path : " + File.Path.replace("/", "\\"))
             Input = input("type your input ")
             Input = Input.lstrip()
             Input = Input.split(" ")

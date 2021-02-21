@@ -85,7 +85,7 @@ def cdir(argument):
         print("folder created at " + path)
 
 
-# exampl ddir <folderName) | delete one folder
+# example ddir <folderName> | delete one folder
 def ddir(argument):
     argument = "/".join(argument)
     path = os.path.join(Path, argument)
@@ -104,11 +104,22 @@ def ddir(argument):
         print("folder deleted at " + path)
 
 
-"""
-def ShowList():
-	listDir = os.listdir(Path)
-	p = subprocess.Popen(['dir',Path])
-	p.wait()
-"""
+def ShowList(path):
+    try:
+        print(Path)
+        cmd = "dir " + os.path.join(Path, path[0])
+        print(cmd)
+        cmd = cmd.replace("/", "\\")
+        os.system(cmd)
+    except IndexError:
+        cmd = Path.replace("/", "\\")
+        if Path == Home:
+            cmd = list(cmd[:-1])
+            cmd = "".join(cmd)
+            os.system("dir " + cmd)
+        else:
+            os.system("dir " + cmd)
+
+
 setPath(Home)  # initialize deafult path
 # ()wtf sublime text can't use : ()
