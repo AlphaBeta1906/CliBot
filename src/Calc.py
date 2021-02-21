@@ -78,7 +78,7 @@ def converter(argument):
             for i in range(len(array)):
                 array[i] = float(array[i])
         except ValueError:  # execute if ValueError was thrown(not number,not exist)
-            print(Fore.RED + "Value error : your value is not number!")
+            print(Fore.RED + "Value error : your value is not number!" + array[i])
         else:
             try:  # check input in command dict
                 calc[cmd](array)
