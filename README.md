@@ -39,8 +39,8 @@ to use these command it must begin with ```math``` keyword followed by command b
 | div | division of all number |
 | avg | avearage of all number |
 
-after input the command above it must followed by series of number delimited by ```,``` and ONLY ONE space between operation command and numebers 
-example : ``` math sums 8,9,5 ``` 
+after input the command above it must followed by series of number delimited by ```,``` and ONLY ONE space between operation command and numbers 
+example : ``` math sum 8,9,5 ``` 
 
 
 ### file handling
@@ -78,6 +78,5 @@ How to compile:
 > python src/main.py #run the main scripts 
 ```
 
-features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 features of this app is still low and it will be great if you add some feature/command or improve this README(because i'm not good at expalain something)<br/>
 *note : you can add api as long as they **NOT** require key
