@@ -75,7 +75,6 @@ def cdir(argument):
         os.mkdir(path)
         for i in range(len(files)):
             file = open(path + "/" + files[i], "w")
-            file.write("")
             file.close()
     except FileNotFoundError:
         print("invalid command")
@@ -94,12 +93,7 @@ def ddir(argument):
     except FileNotFoundError:
         print(Fore.RED + "Error : " + argument + " not exist")
     except OSError:
-        print(
-            Fore.RED
-            + "Error:"
-            + argument
-            + " the system cannot find the path specified"
-        )
+        print(Fore.RED + "Error when delete dir")
     else:
         print("folder deleted at " + path)
 
@@ -108,7 +102,6 @@ def ShowList(path):
     try:
         print(Path)
         cmd = "dir " + os.path.join(Path, path[0])
-        print(cmd)
         cmd = cmd.replace("/", "\\")
         os.system(cmd)
     except IndexError:
@@ -119,6 +112,16 @@ def ShowList(path):
             os.system("dir " + cmd)
         else:
             os.system("dir " + cmd)
+
+
+def multi(List):
+    for fileOrDir in List:
+        if fileOrDir[-1] == "\\" or fileOrDir[-1] == "/":
+            os.mkdir(os.path.join(Path, fileOrDir))
+        else:
+            file = os.path.join(Path, fileOrDir)
+            file = open(file, "w")
+            file.close()
 
 
 setPath(Home)  # initialize deafult path
