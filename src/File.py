@@ -46,6 +46,7 @@ def cfile(argument):
     path = os.path.join(Path, argument[0])
     try:
         if not os.path.exists(path):
+
             file = open(path, "w")
             file.write(content)
             file.close()
@@ -53,7 +54,11 @@ def cfile(argument):
         else:
             print("file or folder with same name already exist")
     except FileNotFoundError:
-        print(Fore.RED + "error : " + path + "not found")
+        print(Fore.RED + "Error : " + path + "not found")
+    except OSError:
+        print(Fore.RED + "Error  : failed create file at " + path)
+    else:
+        print(Fore.GREEN + "Succes : file succesfully created at " + path)
 
 
 # example : dfile <filename> | delete only one file
@@ -77,11 +82,13 @@ def cdir(argument):
             file = open(path + "/" + files[i], "w")
             file.close()
     except FileNotFoundError:
-        print("invalid command")
+        print(Fore.RED + "Error : path not found")
     except FileExistsError:
-        print("dir already exist")
+        print(Fore.RED + "Error : dir already exist")
+    except OSError:
+        print(Fore.RED + "Error : failed creating folder")
     else:
-        print("folder created at " + path)
+        print(Fore.GREEN + " folder created at " + path)
 
 
 # example ddir <folderName> | delete one folder
@@ -93,15 +100,15 @@ def ddir(argument):
     except FileNotFoundError:
         print(Fore.RED + "Error : " + argument + " not exist")
     except OSError:
-        print(Fore.RED + "Error when delete dir")
+        print(Fore.RED + "Error : failed when delete dir")
     else:
-        print("folder deleted at " + path)
+        print(Fore.GREEN + "Success : folder deleted at " + path)
 
 
 def ShowList(path):
     try:
-        print(Path)
-        cmd = "dir " + os.path.join(Path, path[0])
+        print(path)
+        cmd = "dir " + os.path.join(Path, "\\".join(path))
         cmd = cmd.replace("/", "\\")
         os.system(cmd)
     except IndexError:
@@ -116,12 +123,17 @@ def ShowList(path):
 
 def multi(List):
     for fileOrDir in List:
-        if fileOrDir[-1] == "\\" or fileOrDir[-1] == "/":
-            os.mkdir(os.path.join(Path, fileOrDir))
+        try:
+            if fileOrDir[-1] == "\\" or fileOrDir[-1] == "/":
+                os.mkdir(os.path.join(Path, fileOrDir))
+            else:
+                file = os.path.join(Path, fileOrDir)
+                file = open(file, "w")
+                file.close()
+        except OSError:
+            print("Error : failed create list of files at " + Path)
         else:
-            file = os.path.join(Path, fileOrDir)
-            file = open(file, "w")
-            file.close()
+            print(Fore.GREEN + "Success : list of  files created at " + path)
 
 
 setPath(Home)  # initialize deafult path
