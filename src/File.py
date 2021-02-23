@@ -133,7 +133,7 @@ def multi(List):
         except OSError:
             print("Error : failed create list of files at " + Path)
         else:
-            print(Fore.GREEN + "Success : list of  files created at " + path)
+            print(Fore.GREEN + "Success : list of  files created at " + Path)
 
 
 setPath(Home)  # initialize deafult path
