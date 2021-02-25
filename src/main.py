@@ -34,6 +34,7 @@ NonVoidCommand = {
     "dfile": File.dfile,
     "cdir": File.cdir,
     "ddir": File.ddir,
+    "create-multi": File.multi,
     "weather": api.weather,
     "numtrivia": api.NumTrivia,
     "run": simple.run,
