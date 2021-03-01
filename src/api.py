@@ -11,7 +11,7 @@ because they need config module and that's module only own by me
 """
 
 # used to handle and simplified request of all api bellow
-# except two jokes api(it's too complicated) and numtrivia(txt formt not json)
+# except two, jokes api(it's too complicated) and numtrivia(txt formt not json)
 def Handle(url):
     try:
         response = requests.get(url, timeout=10)
