@@ -107,8 +107,7 @@ def ddir(argument):
 
 def ShowList(path):
     try:
-        print(path)
-        cmd = "dir " + os.path.join(Path, "\\".join(path))
+        cmd = "dir " + os.path.join(Path,"\\".join(path))
         cmd = cmd.replace("/", "\\")
         os.system(cmd)
     except IndexError:
