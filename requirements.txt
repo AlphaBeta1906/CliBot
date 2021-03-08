@@ -11,7 +11,7 @@ iniconfig==1.1.1
 mypy-extensions==0.4.3
 packaging==20.9
 pathspec==0.8.1
-Pillow==8.1.0
+Pillow==8.1.2
 pluggy==0.13.1
 py==1.10.0
 pycparser==2.20
