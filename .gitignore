@@ -135,5 +135,5 @@ config.py
 backup.txt
 git.sh
 install.sh
-
+config.json
 

@@ -3,13 +3,13 @@
 
 ## About CliBot
 CliBot is a command line tools that can automate a simple task like create folder with multiple file or create a scrapping through command line. The actual reason why i create this because :
-1. i can move freely in cmd, for example if i was inside desktop i can't straightly go to document without go back to deafult path(C:\Users\My-pc) 
-2. I don't know how to create a folder with files inside using cmd
+1. i can't move freely in cmd, for example if i was inside desktop i can't straightly go to document without go back to deafult path(C:\Users\My-pc) 
+2. I don't know how to create a folder with files inside it using cmd
 3. I don't know how to create file with cmd
 4. I thnik it's really cool if i could google search
 5. Of course with api in it
 
-and yes, I create projects for my own needs, but of course you can also use it, and i really glad of that
+and yes, I create projects for my own needs, but of course you can also use it too
 
 # available commands(for now)
 ### Api
