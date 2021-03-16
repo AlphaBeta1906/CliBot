@@ -25,10 +25,10 @@ def simple(command, value):
             try:
                 res /= value[i]
             except ZeroDivisionError:
-                print(Fore.RED + "divison by zero error!")
+                print(Fore.RED + "error : divison by zero error")
                 res = None
         else:
-            print(Fore.RED + "unknown command :" + command)
+            print(Fore.RED + "error : unknown command '" + command + "'")
             res = None
             break
     print(
@@ -45,22 +45,30 @@ def root(value):
     for i in range(len(value)):
         print("root of " + str(int(value[i])) + ": " + str(math.sqrt(value[i])))
 
+def gravity(value):
+    print()
 
 def square(value):
-    print(
-        "result of "
-        + str(value[0])
-        + "to the power of "
-        + str(value[1])
-        + " : "
-        + str(pow(value[0], value[1]))
-    )
-    if len(value) > 2:
-        print("the other(s) number is ignored")
+    if not len(value) > 2:
+        print(
+            "result of "
+            + str(value[0])
+            + "to the power of "
+            + str(value[1])
+            + " : "
+            + str(pow(value[0], value[1]))
+        )
+    else:
+        print(Fore.RED+ " error : command 'sqr' only accept two argument")
 
+def circle(radius):
+	if not len(radius) > 1 and not len(radius) == 0:
+		print(" area of circle : "+ str(round(math.pi*radius[0],2)))
+	else:
+		print(Fore.RED+ " error : command 'circle' only accept one argument")
 
 # calc command dict
-calc = {"avg": avg, "root": root, "sqr": square}
+calc = {"avg": avg, "root": root, "sqr": square,"circle":circle}
 
 """
 all input from 'math' command in main.py will go trough this function bellow
@@ -78,11 +86,11 @@ def converter(argument):
             for i in range(len(array)):
                 array[i] = float(array[i])
         except ValueError:  # execute if ValueError was thrown(not number,not exist)
-            print(Fore.RED + "Value error : your value is not number!" + array[i])
+            print(Fore.RED + " Value error : " +str(array[i])+ " is not number!" )
         else:
             try:  # check input in command dict
                 calc[cmd](array)
             except KeyError:  # execuwte if KeyError was thrown
                 simple(cmd, array)
     except IndexError:
-        print(Fore.RED + "IndexError: your number/value is empty or not a number!")
+        print(Fore.RED + " IndexError: your number/value is empty or not a number!")

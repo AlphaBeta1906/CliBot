@@ -47,13 +47,12 @@ simple.clr()
 print(Fore.GREEN + "CliBot [ver: v0.0.1]")
 print(Fore.YELLOW + Style.DIM + "Copyright (c) 2021 AlphaBeta MIT License")
 
-
 def main():
     while True:
         try:
             print(Fore.WHITE)
-            print("current path : " + File.Path.replace("/", "\\"))
-            Input = input("type your input ")
+            print(" path : " + File.Path.replace("/", "\\"))
+            Input = input(" $: ")
             Input = Input.lstrip()
             Input = Input.split(" ")
             if Input[0].lower() in simpleCommand:
@@ -68,7 +67,7 @@ def main():
                 break
 
             else:
-                print(Fore.RED + "Unknown command: " + Input[0])
+                print(Fore.RED + " Unknown command: " + Input[0])
         except KeyboardInterrupt:
             break  # change to main() before release
         except EOFError:

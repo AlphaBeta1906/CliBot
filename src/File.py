@@ -40,7 +40,7 @@ def setPath(argument):
             Path = Home
 
 
-# cfile <filename.format> |create one either empty file or one one line file
+# cfile <filename.format> |create one either empty file or one one line files
 def cfile(argument):
     content = " ".join(argument[1:])
     path = os.path.join(Path, argument[0])
